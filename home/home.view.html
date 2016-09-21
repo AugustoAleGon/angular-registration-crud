@@ -1,0 +1,17 @@
+﻿<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!</p>
+<p> This is your information!! </p>
+<p>Id: {{vm.user.id}}</p>
+<p>Username: {{vm.user.username}}</p>
+<p>First Name: {{vm.user.firstName}}</p>
+<p>Last Name: {{vm.user.lastName}}</p><br>
+<h3>All registered users:</h3>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a href="#" ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#/login" class="btn btn-primary">Logout</a></p>
+<p><a href="#/crud" class="btn btn-primary">Crud</a></p>
